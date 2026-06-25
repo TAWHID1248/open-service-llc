@@ -13,25 +13,17 @@ COPY requirements.txt .
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-# Copy project
+# Copy project files
 COPY . .
 
-# Copy and make start script executable
-COPY start.sh /app/start.sh
-RUN chmod +x /app/start.sh
+# Create necessary directories
+RUN mkdir -p /app/staticfiles /app/media
 
-# Create static files directory
-RUN mkdir -p /app/staticfiles
-
-# Try to collect static files (it's okay if it fails at this stage)
-RUN python manage.py collectstatic --noinput --clear || true
-
-# Create a non-root user
-RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
-USER appuser
+# Collect static files (optional, may fail in build)
+RUN python manage.py collectstatic --noinput 2>/dev/null || true
 
 # Expose port
 EXPOSE 8000
 
-# Start server with initialization script
-CMD ["/app/start.sh"]
+# Start Gunicorn directly
+CMD ["sh", "-c", "python manage.py migrate --noinput && python manage.py seed_data 2>/dev/null || true && gunicorn config.wsgi --bind 0.0.0.0:8000 --workers 2 --timeout 60"]
