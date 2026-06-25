@@ -1,0 +1,5 @@
+[build]
+cmds = ["pip install -r backend/requirements.txt"]
+
+[start]
+cmd = "cd backend && gunicorn config.wsgi --bind 0.0.0.0:$PORT"
