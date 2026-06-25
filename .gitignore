@@ -3,11 +3,13 @@ backend/db.sqlite3
 backend/media/
 backend/.env
 backend/.env.local
+backend/staticfiles/
 
 frontend/node_modules/
 frontend/dist/
 frontend/.env
 frontend/.env.local
+frontend/.env.*.local
 
 .DS_Store
 *.pyc
