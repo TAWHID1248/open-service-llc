@@ -1,5 +1,10 @@
 [build]
-cmds = ["pip install -r backend/requirements.txt"]
+cmds = [
+  "cd frontend && npm install && npm run build",
+  "mkdir -p backend/staticfiles",
+  "cp -r frontend/dist/* backend/staticfiles/",
+  "pip install -r backend/requirements.txt"
+]
 
 [start]
 cmd = "cd backend && gunicorn config.wsgi --bind 0.0.0.0:$PORT"
