@@ -38,7 +38,8 @@
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
       "Bash(rm -f /Users/tawhidshaheed/Documents/izzyservice/frontend/verify*.mjs)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(git rm *)"
     ]
   }
 }
