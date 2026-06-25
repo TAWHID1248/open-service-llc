@@ -1,0 +1,41 @@
+.service-sidebar {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.service-sidebar h4 {
+  margin: 0 0 14px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+}
+
+.service-sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.service-sidebar a {
+  display: block;
+  padding: 10px 12px;
+  font-size: 0.88rem;
+  border-radius: 3px;
+  color: var(--color-text);
+}
+
+.service-sidebar a:hover {
+  background: var(--color-bg-light);
+}
+
+.service-sidebar a.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.service-sidebar .dot {
+  margin-right: 6px;
+}

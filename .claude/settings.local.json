@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(pip3 show *)",
+      "Bash(command -v node nvm)",
+      "Read(//Users/tawhidshaheed/.nvm/versions/**)",
+      "Read(//usr/local/bin/**)",
+      "Read(//opt/homebrew/bin/**)",
+      "Bash(brew list *)",
+      "Bash(command -v brew)",
+      "Bash(brew --version)",
+      "Bash(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh -o /tmp/nvm_install.sh)",
+      "Bash(bash /tmp/nvm_install.sh)",
+      "Bash(mkdir -p /Users/tawhidshaheed/Documents/izzyservice/assets)",
+      "Bash(python3 -m venv backend_venv)",
+      "Bash(pkill -f \"manage.py runserver\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://127.0.0.1:5173/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://127.0.0.1:8000/api/services/electricity/)",
+      "Bash(curl -s http://127.0.0.1:8000/api/services/electricity/)",
+      "Bash(python3 -m json.tool)",
+      "Bash(curl -sv http://127.0.0.1:5173/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5173/)",
+      "Bash(lsof -nP -iTCP:5173 -sTCP:LISTEN)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Skill(run)",
+      "Bash(npx --version)",
+      "Bash(node -e \"require.resolve\\('playwright'\\)\")",
+      "Bash(curl -s -X POST http://127.0.0.1:8000/api/contact/ -H \"Content-Type: application/json\" -d '{\"name\":\"Test User\",\"email\":\"test@example.com\",\"phone\":\"555-1234\",\"subject\":\"Test Inquiry\",\"message\":\"This is a smoke test.\"}')",
+      "Bash(pkill -f \"vite\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://127.0.0.1:8000/api/services/)",
+      "WebFetch(domain:izzyservice.com)",
+      "Bash(curl *)",
+      "Bash(python3 *)",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}

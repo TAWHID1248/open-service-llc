@@ -1,0 +1,28 @@
+.static-page {
+  max-width: 760px;
+}
+
+.static-page h3 {
+  color: var(--color-primary);
+  margin: 30px 0 10px;
+}
+
+.static-page p {
+  color: var(--color-muted);
+  margin: 0 0 12px;
+}
+
+.static-page .bullet-list li {
+  padding-left: 22px;
+  position: relative;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+.static-page .bullet-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}

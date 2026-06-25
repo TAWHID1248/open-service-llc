@@ -1,0 +1,106 @@
+:root {
+  --color-primary: #0b3d78;
+  --color-primary-light: #1971c2;
+  --color-primary-dark: #082a54;
+  --color-accent: #f5a623;
+  --color-dark: #14181f;
+  --color-dark-soft: #1c222c;
+  --color-text: #2b2f36;
+  --color-muted: #6b7280;
+  --color-bg-light: #f6f8fb;
+  --color-white: #ffffff;
+  --color-border: #e4e8ee;
+  --max-width: 1180px;
+  --font-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  color: var(--color-text);
+  background: var(--color-white);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  border-radius: 2px;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.btn-accent {
+  background: var(--color-accent);
+  color: var(--color-dark);
+}
+
+.btn-accent:hover {
+  background: #e0941a;
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn-outline:hover {
+  background: var(--color-accent);
+  color: var(--color-dark);
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.section-title .highlight {
+  color: var(--color-primary-light);
+}
+
+.section-underline {
+  width: 56px;
+  height: 3px;
+  background: var(--color-accent);
+  margin-bottom: 28px;
+}
