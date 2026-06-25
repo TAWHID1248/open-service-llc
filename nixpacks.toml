@@ -1,3 +1,7 @@
+[providers]
+node = true
+python = true
+
 [build]
 cmds = [
   "cd frontend && npm install && npm run build",
