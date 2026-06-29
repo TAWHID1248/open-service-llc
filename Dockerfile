@@ -10,6 +10,9 @@ RUN npm run build
 FROM python:3.13-slim
 WORKDIR /app
 
+# Install build deps needed for psycopg2-binary on slim image
+RUN apt-get update && apt-get install -y --no-install-recommends gcc libpq-dev && rm -rf /var/lib/apt/lists/*
+
 # Install dependencies
 COPY backend/requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
